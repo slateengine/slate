@@ -1,0 +1,8 @@
+{
+  "name": "slatesass",
+  "version": "8.0.0",
+  "description": "A Sass Framework for building at light speed",
+  "main": "_slate.scss",
+  "author": "Hash&Salt",
+  "license": "MIT"
+}
