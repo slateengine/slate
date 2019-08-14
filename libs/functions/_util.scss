@@ -134,6 +134,7 @@
 /// @param {ArgList} $maps - other maps
 /// @param {Bool} $deep - recursive mode
 /// @return {Map}
+
 @function map-extend($map, $maps.../*, $deep */) {
   $last: nth($maps, -1);
   $deep: $last == true;
@@ -164,4 +165,26 @@
   }
 
   @return $map;
+}
+
+// Lightness
+@mixin lightness($bgcolor, $lightcolor, $darkcolor, $diff: 50) {
+  color: colorcompare($bgcolor, $lightcolor, $darkcolor, $diff);
+}
+
+// Borders
+@mixin borders($width, $style, $color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+
+// Switch Color light / dark based on background contrast
+// ======================================================================
+@function colorcompare($bgcolor, $lightcolor: $bright, $darkcolor: $dark, $diff, ) {
+  @if (lightness($bgcolor) > $diff) {
+    @return $darkcolor; // Lighter backgorund, return dark color
+  } @else {
+    @return $lightcolor; // Darker background, return light color
+  }
 }
