@@ -15,15 +15,8 @@ Include Slate in your project:
 ```
 @import 'slate';
 ```
-However, this will leave you stuck at the default settings. You can find a set of config vars 
+However, this will leave you stuck at the default settings for the core. Whilst you can grab these out of the node modules folder, for your convenience we have put them in this repo for reference. You want the ones in the core folder.
 
-```
-@import 'slate/slate-engine';
-```
-### Don't have an asset pipeline?
-
-If you need a way to compile your project, we have that covered too. _Slate Engine_ is a build tool based on Laravel Mix, NPM scripts, and bash. It also has Slate ready wired up, and ready to rock. You can get this [here](https://github.com/HashandSalt/slateengine).
-
-For full documentation, visit www.slateengine.com.
+For full documentation, visit the [Slate](https://www.slateengine.com) website.
 
 _Slate_ was made with ♥ by [Hash&Salt](https://www.hashandsalt.com).
