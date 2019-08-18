@@ -15,7 +15,7 @@ Include Slate in your project:
 ```
 @import 'slate';
 ```
-However, this will leave you stuck at the default settings for the core. Whilst you can grab these out of the node modules folder, for your convenience we have put them in this repo for reference. You want the ones in the core folder.
+However, this will leave you stuck at the default settings for the core. Whilst you can grab these out of the node modules folder, for your convenience we have put them in [this repo](https://github.com/slateengine/slateconfigs) for reference. You want the ones in the core folder.
 
 For full documentation, visit the [Slate](https://www.slateengine.com) website.
 
