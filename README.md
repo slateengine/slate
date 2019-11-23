@@ -8,7 +8,7 @@ Assuming you have an existing project with an asset pipeline (Gulp, Grunt, Ruby,
 
 ```sh
 $ cd your/project/folder
-$ yarn add slatesass -D
+$ yarn add @slateengine/slatekits
 ```
 Include Slate in your project:
 
