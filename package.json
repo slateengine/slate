@@ -4,5 +4,15 @@
   "description": "A Sass Framework for building at light speed",
   "main": "_slate.scss",
   "author": "Hash&Salt",
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Hash&Salt",
+  "email": "hello@slateengine.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slateengine/slate"
+  },
+  "bugs": {
+    "url": "https://github.com/slateengine/slate/issues"
+  }
 }
