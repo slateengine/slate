@@ -168,8 +168,8 @@
 }
 
 // Lightness
-@mixin lightness($diff: 50, $bgcolor, $lightcolor, $darkcolor) {
-  color: colorcompare($lightcolor, $darkcolor, $bgcolor, $diff);
+@mixin lightness($bgcolor, $lightcolor, $darkcolor, $diff: 50) {
+  color: colorcompare($bgcolor, $diff, $lightcolor, $darkcolor);
 }
 
 // Borders
@@ -181,10 +181,11 @@
 
 // Switch Color light / dark based on background contrast
 // ======================================================================
-@function colorcompare($lightcolor: $bright, $darkcolor: $dark, $bgcolor, $diff) {
+@function colorcompare($bgcolor, $diff, $lightcolor: $bright, $darkcolor: $dark) {
   @if (lightness($bgcolor) > $diff) {
     @return $darkcolor; // Lighter backgorund, return dark color
   } @else {
     @return $lightcolor; // Darker background, return light color
   }
 }
+
