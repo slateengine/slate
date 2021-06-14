@@ -6,6 +6,7 @@
 // Math Functions
 // ======================================================================
 
+@use "sass:math";
 
 // Convert PX to REM
 // ======================================================================
@@ -35,9 +36,9 @@
 
   @each $value in $values {
     @if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
-      $result: append($result, $value / 1rem * $rem-base, $separator);
+      $result: append($result, math.div($value, 1rem) * $rem-base, $separator);
     } @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
-      $result: append($result, $value / $rem-base * 1rem, $separator);
+      $result: append($result, math.div($value, $rem-base) * 1rem, $separator);      
     } @else if type-of($value) == "list" {
       $value-separator: rem-separator($value);
       $value: rem-convert($to, $value...);
