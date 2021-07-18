@@ -1,3 +1,13 @@
+// ======================================================================
+// Slate Framework <hello@slateengine.com>
+// ======================================================================
+//
+// ======================================================================
+// SVG Functions
+// ======================================================================
+
+@use "sass:math";
+
 /// Based on work by Kinaly (https://codepen.io/Kinaly/pen/OMNQpY) and Jacob-e (https://codepen.io/jakob-e/pen/doMoML). We salute you.
 @function svg-url($svg) {
   //
@@ -7,7 +17,7 @@
   $encoded: '';
   $slice: 2000;
   $index: 0;
-  $loops: ceil(str-length($svg)/$slice);
+  $loops: ceil(math.div(str-length($svg), $slice));
   @for $i from 1 through $loops {
     $chunk: str-slice($svg, $index, $index + $slice - 1);
     //

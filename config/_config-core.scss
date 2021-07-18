@@ -1,10 +1,10 @@
 // ======================================================================
 // Slate Core Config | hello@hashandsalt.com
 // ======================================================================
-
+@use "sass:math";
 /// Media Embed - 16:9 ratio
 /// @group Media
-$ioe-padding: ((100 / 16) * 9) !default;
+$ioe-padding: ((math.div(100, 16)) * 9) !default;
 
 /// Font size
 /// @group Type
