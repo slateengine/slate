@@ -1,6 +1,6 @@
 {
   "name": "@slateengine/slatesass",
-  "version": "8.1.0",
+  "version": "8.1.1",
   "description": "A Sass Framework for building at light speed",
   "main": "_slate.scss",
   "author": "Hash&Salt",

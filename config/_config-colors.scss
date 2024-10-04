@@ -43,7 +43,7 @@ $disabled: #adadad !default;
 $gradient-start: $primary !default;
 /// Gradient - Middle
 /// @group Gradient Colors
-$gradient-middle: darken($primary, 20%) !default;
+$gradient-middle: color.adjust($primary, $lightness: 20%) !default;
 /// Gradient - End
 /// @group Gradient Colors
-$gradient-end: darken($primary, 40%) !default;
+$gradient-end: color.adjust($primary, $lightness: 40%) !default;
