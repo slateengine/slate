@@ -6,6 +6,8 @@
 // Utility Functions
 // ======================================================================
 
+@use "sass:color";
+
 @mixin ios {
   @supports (-webkit-overflow-scrolling: touch) {
     @content;
@@ -182,7 +184,7 @@
 // Switch Color light / dark based on background contrast
 // ======================================================================
 @function colorcompare($bgcolor, $diff, $lightcolor: $bright, $darkcolor: $dark) {
-  @if (lightness($bgcolor) > $diff) {
+  @if (color.channel($bgcolor, "lightness", $space: hsl) > $diff) {
     @return $darkcolor; // Lighter backgorund, return dark color
   } @else {
     @return $lightcolor; // Darker background, return light color
